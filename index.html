@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <title>Solvari Team</title>
+</head>
+
+<body id="app">
+
+
+    <div class="container" v-for="team in filteredTeams" :key="id">
+       <div class="col-md-12 text-center">
+        <header>
+            <img class="team-logo" src="solvari.png">
+
+            <h1>Team</h1>
+            <input class="search" type="text" v-model="search" placeholder="Filter by Name or Department">
+        </header>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <img class="avatar" src="https:\/\/res.cloudinary.com\/solvari\/image\/upload\/c_thumb%2Cf_auto\/v1509008364\/production\/images\/nl-NL\/user\/2646" alt="employee-d">
+                <div> Name: <span class="title">{{team[0].first_name}}  {{team[0].last_name}}<a href="https://www.linkedin.com/in/dennis-van-den-bos-63850a12/" target="_blank"><i class="fab fa-linkedin"></i></a> </span></div>
+
+                <div> Function: <span class="title">{{team[0].function}}</span></div>
+
+
+            </div>
+
+            <div class="col-md-4">
+                <img class="avatar" src="https:\/\/res.cloudinary.com\/solvari\/image\/upload\/c_thumb%2Cf_auto\/v1508935191\/production\/images\/nl-NL\/user\/3667" alt="employee-d">
+                <div> Name: <span class="title">{{team[1].first_name}}  {{team[1].last_name}}</span> </div>
+                <div> Department: <span class="title">{{team[1].department}}</span> </div>
+                <div> Function: <span class="title">{{team[1].function}}</span></div>
+
+            </div>
+             <div class="col-md-4">
+                <img class="avatar" src="https:\/\/res.cloudinary.com\/solvari\/image\/upload\/c_thumb%2Cf_auto\/v1509008489\/production\/images\/nl-NL\/user\/1018" alt="employee-d">
+                <div> Name: <span class="title">{{team[8].first_name}}  {{team[8].last_name}}</span> </div>
+                <div> Department: <span class="title">{{team[8].department}}</span> </div>
+                <div> Function: <span class="title">{{team[8].function}}</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img class="avatar" src="https:\/\/res.cloudinary.com\/solvari\/image\/upload\/c_thumb%2Cf_auto\/v1508936366\/production\/images\/nl-NL\/user\/31029" alt="employee-d">
+                <div> Name: <span class="title">{{team[2].first_name}}  {{team[2].last_name}}</span> </div>
+                <div> Department: <span class="title">{{team[2].department}}</span> </div>
+                <div> Function: <span class="title">{{team[2].function}}</span></div>
+            </div>
+
+            <div class="col-md-4">
+                <img class="avatar" src="male.svg" alt="employee-d">
+                <div> Name: <span class="title">{{team[3].first_name}}  {{team[3].last_name}}</span> </div>
+                <div> Department: <span class="title">{{team[3].department}}</span> </div>
+                <div> Function: <span class="title">{{team[3].function}}</span></div>
+            </div>
+            <div class="col-md-4">
+                <img class="avatar" src="https:\/\/res.cloudinary.com\/solvari\/image\/upload\/c_thumb%2Cf_auto\/v1511376756\/production\/images\/nl-NL\/user\/95605" alt="employee-d">
+                <div> Name: <span class="title">{{team[4].first_name}}  {{team[4].last_name}}</span> </div>
+                <div> Department: <span class="title">{{team[4].department}}</span> </div>
+                <div> Function: <span class="title">{{team[4].function}}</span></div>
+            </div>
+        </div>
+        <!-- end row -->
+        <!-- Second row with three equal columns-->
+        <div class="row">
+            <div class="col-md-4">
+                <img class="avatar" src="male.svg" alt="employee-d">
+                <div> Name: <span class="title">{{team[5].first_name}}  {{team[5].last_name}}</span> </div>
+                <div> Department: <span class="title">{{team[5].department}}</span> </div>
+                <div> Function: <span class="title">{{team[5].function}}</span></div>
+            </div>
+            <div class="col-md-4">
+                <img class="avatar" src="https:\/\/res.cloudinary.com\/solvari\/image\/upload\/c_thumb%2Cf_auto\/v1509008265\/production\/images\/nl-NL\/user\/71814" alt="employee-d">
+                <div> Name: <span class="title">{{team[6].first_name}}  {{team[6].last_name}}</span> </div>
+                <div> Department: <span class="title">{{team[6].department}}</span> </div>
+                <div> Function: <span class="title">{{team[6].function}}</span></div>
+            </div>
+            <div class="col-md-4">
+                <img class="avatar" src="https:\/\/res.cloudinary.com\/solvari\/image\/upload\/c_thumb%2Cf_auto\/v1508937626\/production\/images\/nl-NL\/user\/1035" alt="employee-d">
+                <div> Name: <span class="title">{{team[7].first_name}}  {{team[7].last_name}} <a href="https://www.linkedin.com/in/gilberto-boekhout-11978b7b/"><i class="fab fa-linkedin"></i></a></span>
+                </div>
+                <div> Department: <span class="title">{{team[7].department}}</span> </div>
+                <div> Function: <span class="title">{{team[7].function}}</span></div>
+              
+            </div>
+        </div>
+        <!-- end row -->
+        <div class="row">
+           
+            <div class="col-md-4">
+                <img class="avatar" src="female.svg" alt="employee-d">
+                <div> Name: <span class="title">{{team[9].first_name}}  {{team[9].last_name}} <a href="https://www.linkedin.com/in/lennekedegroot/" target="blank"><i class="fab fa-linkedin"></i></a></span> </div>
+                <div> Department: <span class="title">{{team[9].department}}</span> </div>
+                <div> Function: <span class="title">{{team[9].function}}</span></div>
+                </span>
+               
+            </div>
+            <div class="col-md-4">
+                <img class="avatar" src="https:\/\/res.cloudinary.com\/solvari\/image\/upload\/c_thumb%2Cf_auto\/v1509008729\/production\/images\/nl-NL\/user\/18929" alt="employee-d">
+                <div> Name: <span class="title">{{team[10].first_name}}  {{team[10].last_name}}</span></div>
+                <div> Department: <span class="title">{{team[10].department}}</span> </div>
+                <div> Function: <span class="title">{{team[10].function}}</span></div>
+                <div> LinkedIn: <span class="title">{{team[10].linkedin_url}}</span>
+            </div>
+        </div>
+        <!--      end row -->
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.1/vue.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
